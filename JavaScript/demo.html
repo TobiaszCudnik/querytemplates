@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>QueryTemplates javaScript demo</title>
+<script type="text/javascript" src="jquery-1.3.2.js"></script>
+<script type="text/javascript" src="QueryTemplatesLight.js"></script>
+<!--<script type="text/javascript" src="QueryTemplatesLight.min.js"></script>-->
+<script type="text/javascript">
+var data_valuesToLoopFirst = [
+     {
+         'User': {'name': 'foo'},
+         'Tags': [
+             {'tag': 'php'},
+             {'tag': 'js'}
+         ]
+     },
+     {
+         'User': {'name': 'bar'},
+         'Tags': [
+             {'tag': 'perl'}
+         ]
+     },
+     {
+         'User': {'name': 'fooBar'},
+         'Tags': [
+             {'tag': 'php'},
+             {'tag': 'js'},
+             {'tag': 'perl'}
+         ]
+     }
+];
+var data_valuesToForm = {
+  'text-example': 'new value',
+  'checkbox-example': true,
+  'radio-example': 'second',
+  'select-example': ['second', 'third'],
+  'textarea-example': 'new value',
+};
+var structure_formFromValues = {
+	'__form': {'id': 'myFormId'},
+	0: { 
+		'__label': 'Fieldset 1 legend',
+		'default-field': {	// 'text' is default
+			'label': 'default-field label',
+			'id': 'default-field-id'
+		},
+		'text-field': {
+			0: 'text',
+			'label': 'text-field label',
+			'id': 'text-field-id'
+		},
+		'hidden-field': 'hidden',
+		'checkbox-field': 'checkbox'
+	},
+	1: {
+		'__label': 'Fieldset 2 legend',
+		'select-field': {
+			0: 'select', 
+			'label': 'select-field label'
+		},
+		'radio-field': {
+			0: 'radio', 
+			'values': ['possibleValue1', 'possibleValue2']
+		},
+		'textarea-field': 'textarea'
+	}
+};
+var data_formFromValues = {
+	'select-field': {
+		// no optgroup
+		'bar1': 'bar1 label',
+		'bar2': 'bar2 label',
+		'bar3': 'bar3 label'
+	}
+};
+var record_formFromValues = {
+  'text-field': 'value from record',
+  'radio-field': 'possibleValue2'
+};
+function valuesToLoopFirst() {
+	$('ul > li:has(ul)')
+		.valuesToLoopFirst(data_valuesToLoopFirst, function(row, i) {
+			if (i == 0)
+				this.dumpTree();
+			this
+				.valuesToSelector(row.User, 'span.%k')
+				.find('> ul > li')
+					.valuesToLoopFirst(row.Tags, function(tag, ii) {
+						if (i == 0 && ii == 0)
+							this.dumpTree();
+						this.valuesToSelector(tag);
+				})
+			;
+		});
+}
+function valuesToForm() {
+	$('form.valuesToForm')
+		.dumpTree()
+		.valuesToForm(data_valuesToForm)
+		.dumpTree();
+}
+function formFromValues() {
+	$('form.formFromValues').formFromValues(
+		record_formFromValues, structure_formFromValues, undefined, data_formFromValues
+	)
+	.dumpTree();;
+}
+$(function(){
+	$('button.valuesToLoopFirst').click(function(){
+		valuesToLoopFirst();
+	});
+	$('button.valuesToForm').click(function(){
+		valuesToForm();
+	});
+	$('button.formFromValues').click(function(){
+		formFromValues();
+	});
+});
+</script>
+</head>
+<body>
+<h1><a href='http://code.google.com/p/querytemplates/'>QueryTemplates</a> Light for JavaScript live demos</h1>
+<h2>Demo #1: <a href='http://code.google.com/p/querytemplates/wiki/valuesToLoopFirstMethodJS'>valuesToLoopFirst</a> combined with <a href='http://code.google.com/p/querytemplates/wiki/valuesToSelectorMethodJS'>valuesToSelector</a></h2>
+<h4>Data</h4>
+<pre>
+var data = [
+  {'User': {'name': 'foo'},
+    'Tags': [
+      {'tag': 'php'},
+      {'tag': 'js'}
+  ]},
+  {'User': {'name': 'bar'},
+    'Tags': [
+      {'tag': 'perl'}
+  ]},
+  {'User': {'name': 'fooBar'},
+    'Tags': [
+      {'tag': 'php'},
+      {'tag': 'js'},
+      {'tag': 'perl'}
+  ]}
+];
+</pre>
+<h4>Code</h4>
+<pre style='font-size: 1.3em;'>
+$('ul &gt; li:has(ul)')
+  .<strong><a href='http://code.google.com/p/querytemplates/wiki/valuesToLoopFirstMethodJS'>valuesToLoopFirst</a></strong>(data, function(row) {
+    this
+      .<strong><a href='http://code.google.com/p/querytemplates/wiki/valuesToSelectorMethodJS'>valuesToSelector</a></strong>(row.User, 'span.%k')
+      .find('&gt; ul &gt; li')
+        .<strong><a href='http://code.google.com/p/querytemplates/wiki/valuesToLoopFirstMethodJS'>valuesToLoopFirst</a></strong>(row.Tags, function(tag) {
+          this.<strong><a href='http://code.google.com/p/querytemplates/wiki/valuesToSelectorMethodJS'>valuesToSelector</a></strong>(tag);
+        });
+  });
+}
+</pre>
+<button class='valuesToLoopFirst'>Test code above</button>
+<blockquote>
+	<ul>
+	     <li class='row'>
+	         <span class='name'>lorem ipsum</span>
+	         <ul class='tags'>
+	             <li class='tag'>
+	                 <span class='tag'>tag 1</span>
+	             </li>
+	             <li class='tag'>
+	                 <span class='tag'>tag 2</span>
+	             </li>
+	         </ul>
+	     </li>
+	     <li class='row'>
+	         <span class='name'>lorem ipsum</span>
+	         <ul class='tags'>
+	             <li class='tag'>
+	                 <span class='tag'>tag 1</span>
+	             </li>
+	             <li class='tag'>
+	                 <span class='tag'>tag 2</span>
+	             </li>
+	         </ul>
+	     </li>
+	</ul>
+</blockquote>
+<h2>Demo #2: <a href='http://code.google.com/p/querytemplates/wiki/valuesToFormMethodJS'>valuesToForm</a></h2>
+<h4>Data</h4>
+<pre>
+var data = {
+  'text-example': 'new value',
+  'checkbox-example': true,
+  'radio-example': 'second',
+  'select-example': ['second', 'third'],
+  'textarea-example': 'new value',
+};
+</pre>
+<h4>Code</h4>
+<pre style='font-size: 1.3em;'>
+$('form')
+  .<strong><a href='http://code.google.com/p/querytemplates/wiki/valuesToFormMethodJS'>valuesToForm</a></strong>(data);
+</pre>
+<button class='valuesToForm'>Test code above</button>
+<blockquote>
+	<form class='valuesToForm'>
+		<dl>
+			<dt>text-example</dt>
+			<dd><input type='text' name='text-example' value='old'></dd>
+		</dl>
+		<dl>
+			<dt>checkbox-example</dt>
+			<dd><input type='checkbox' name='checkbox-example' value='foo'></dd>
+		</dl>
+		<dl>
+			<dt>radio-example</dt>
+			<dd>
+				<input type='radio' name='radio-example' value='first' checked='checked'>
+				<input type='radio' name='radio-example' value='second'>
+			</dd>
+		</dl>
+		<dl>
+			<dt>select-example</dt>
+			<dd>
+				<select name='select-example' multiple="multiple">
+					<option value='first' selected='selected'>first</option>
+			  	<option value='second'>second</option>
+			  	<option value='third'>third</option>
+				</select>
+			</dd>
+		</dl>
+		<dl>
+			<dt>textarea-example</dt>
+			<dd><textarea name='textarea-example'>old</textarea></dd>
+		</dl>
+	</form>
+</blockquote>
+<h2>Demo #3: <a href='http://code.google.com/p/querytemplates/wiki/formFromValuesMethodJS'>formFromValues</a></h2>
+<h4>Data</h4>
+<pre>
+var structure = {
+  '__form': {'id': 'myFormId'},
+  0: { 
+    '__label': 'Fieldset 1 legend',
+    'default-field': {  // 'text' is default
+      'label': 'default-field label',
+      'id': 'default-field-id'
+    },
+    'text-field': {
+      0: 'text',
+      'label': 'text-field label',
+      'id': 'text-field-id'
+    },
+    'hidden-field': 'hidden',
+    'checkbox-field': 'checkbox'
+  },
+  1: {
+    '__label': 'Fieldset 2 legend',
+    'select-field': {
+      0: 'select', 
+      'label': 'select-field label'
+    },
+    'radio-field': {
+      0: 'radio', 
+      'values': ['possibleValue1', 'possibleValue2']
+    },
+    'textarea-field': 'textarea'
+  }
+};
+var data = {
+  'select-field': {
+    // no optgroup
+    'bar1': 'bar1 label',
+    'bar2': 'bar2 label',
+    'bar3': 'bar3 label'
+  }
+};
+var record = {
+  'text-field': 'value from record',
+  'radio-field': 'possibleValue2'
+};</pre>
+<h4 style='font-size: 1.3em;'>Code</h4>
+<pre>
+$('form.formFromValues')
+  .<strong><a href='http://code.google.com/p/querytemplates/wiki/formFromValuesMethodJS'>formFromValues</a></strong>(
+    record, structure, undefined, data
+  );
+</pre>
+<button class='formFromValues'>Test code above</button>
+<blockquote>
+	<form class='formFromValues'></form>
+</blockquote>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6546674-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

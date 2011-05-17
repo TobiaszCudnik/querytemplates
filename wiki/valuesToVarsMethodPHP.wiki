@@ -1,0 +1,14 @@
+#sidebar SyntaxSidebar
+= `valuesToVars` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [valuesToSyntax valuesTo] > [valuesToVarsMethodPHP valuesToVars]
+=== Parameters ===
+ * *$varsArray* 
+
+
+
+=== Description ===
+
+----
+
+
+=== Comments allowed ===

@@ -1,0 +1,12 @@
+#sidebar SyntaxSidebar
+= `tagToElseStatement` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [elseSyntax else] > [tagToElseStatementMethodPHP tagToElseStatement]
+=== Parameters ===
+
+
+=== Description ===
+
+----
+
+
+=== Comments allowed ===

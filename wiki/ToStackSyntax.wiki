@@ -1,0 +1,81 @@
+#sidebar SyntaxSidebar
+= `ToStack` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [ToStackSyntax ToStack]
+
+[ToStackSyntax ToStack] methods injects data (dynamic / static / executable) into actually matched nodes.
+
+== Methods ==
+=== PHP ===
+ * [codeToStackMethodPHP codeToStack]
+ * [codeToStackAfterMethodPHP codeToStackAfter]
+ * [codeToStackAppendMethodPHP codeToStackAppend]
+ * [codeToStackAttrMethodPHP codeToStackAttr]
+ * [codeToStackBeforeMethodPHP codeToStackBefore]
+ * [codeToStackPrependMethodPHP codeToStackPrepend]
+ * [codeToStackReplaceMethodPHP codeToStackReplace]
+ * [valuesToStackMethodPHP valuesToStack]
+ * [valuesToFormMethodPHP valuesToForm]
+ * [valuesToStackAfterMethodPHP valuesToStackAfter]
+ * [valuesToStackAppendMethodPHP valuesToStackAppend]
+ * [valuesToStackAttrMethodPHP valuesToStackAttr]
+ * [valuesToStackBeforeMethodPHP valuesToStackBefore]
+ * [valuesToStackPrependMethodPHP valuesToStackPrepend]
+ * [valuesToStackReplaceMethodPHP valuesToStackReplace]
+ * [varsToStackMethodPHP varsToStack]
+ * [varsToStackAfterMethodPHP varsToStackAfter]
+ * [varsToStackAppendMethodPHP varsToStackAppend]
+ * [varsToStackAttrMethodPHP varsToStackAttr]
+ * [varsToStackBeforeMethodPHP varsToStackBefore]
+ * [varsToStackPrependMethodPHP varsToStackPrepend]
+ * [varsToStackReplaceMethodPHP varsToStackReplace]
+
+=== JS ===
+ * [valuesToStackMethodJS valuesToStack]
+ * [valuesToStackAfterMethodJS valuesToStackAfter]
+ * [valuesToStackAppendMethodJS valuesToStackAppend]
+ * [valuesToStackAttrMethodJS valuesToStackAttr]
+ * [valuesToStackBeforeMethodJS valuesToStackBefore]
+ * [valuesToStackPrependMethodJS valuesToStackPrepend]
+ * [valuesToStackReplaceMethodJS valuesToStackReplace]
+
+== Example PHP ==
+=== Markup ===
+{{{
+ <node1>
+   <node2></node2>
+ </node1>
+ <node2></node2>
+ <node1>
+   <node2></node2>
+ </node1>
+}}}
+=== Data ===
+{{{
+ $foo = array('<foo/>', '<bar/>');
+}}}
+=== `QueryTemplates` Formula ===
+{{{
+ $template['node1']->varsToStack('foo', array_keys($foo));
+}}}
+=== Template ===
+{{{
+ <node1><?php  if (isset($foo['0'])) print $foo['0'];
+ else if (isset($foo->{'0'})) print $foo->{'0'};  ?></node1><node2></node2><node1><?php  if (isset($foo['1'])) print $foo['1'];
+ else if (isset($foo->{'1'})) print $foo->{'1'};  ?></node1>
+}}}
+=== Template tree before ===
+{{{
+ node1
+  - node2
+ node2
+ node1
+  - node2
+}}}
+=== Template tree after ===
+{{{
+ node1
+  - PHP
+ node2
+ node1
+  - PHP
+}}}

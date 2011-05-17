@@ -1,0 +1,11 @@
+#sidebar SyntaxSidebar
+= `if` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [ifSyntax if]
+
+== Methods ==
+ * [ifNotVarMethodPHP ifNotVar]
+ * [ifPHPMethodPHP ifPHP]
+ * [ifVarMethodPHP ifVar]
+ * [tagToIfNotVarMethodPHP tagToIfNotVar]
+ * [tagToIfPHPMethodPHP tagToIfPHP]
+ * [tagToIfVarMethodPHP tagToIfVar]

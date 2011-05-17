@@ -1,0 +1,87 @@
+#sidebar SyntaxSidebar
+= `varsToStackAppend` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [varsToSyntax varsTo] > [varsToStackAppendMethodPHP varsToStackAppend]
+=== Parameters ===
+ * *$varName* _String_
+  Variable avaible in scope of type Array or Object.  $varName should NOT start with $.
+ * *$varFields* _Array|Object_
+  Variable value with all fields (keys) OR array of variable fields (keys).  Param needs to be passed thou array_keys for non-assosiative arrays.
+ * *$skipFields* _Array_ = `null`
+  Array of keys from $varValue which should be skipped.
+ * *$fieldCallback* _Callback|string_ = `null`
+  Callback triggered after every insertion. Three parameters are passed to  this callback:
+   * $node phpQueryObject
+   * $field String
+   * $target String|array
+
+
+=== Description ===
+Injects executable code printing variable's fields at the end of actually  matched nodes. Second param needs to be wrapped with array_keys for  non-assosiative arrays.
+
+
+Method doesn't change selected elements stack.
+
+
+== Example ==
+
+
+=== Markup ===
+{{{
+ <node1>
+   <node2/>
+ </node1>
+ <node2/>
+ <node1>
+   <node2/>
+ </node1>
+
+}}}
+=== Data ===
+{{{
+ $foo = new stdClass();
+ $foo->first = 'foo';
+ $foo->second = 'bar';
+
+}}}
+=== `QueryTemplates` formula ===
+{{{
+ $template['node1']->
+     varsToStackAppend('foo', $foo)
+ ;
+
+}}}
+=== Template ===
+{{{
+ <node1><node2></node2><?php  if (isset($foo['first'])) print $foo['first'];
+ else if (isset($foo->{'first'})) print $foo->{'first'};  ?></node1><node2></node2><node1><node2></node2><?php  if (isset($foo['second'])) print $foo['second'];
+ else if (isset($foo->{'second'})) print $foo->{'second'};  ?></node1>
+
+}}}
+=== Template tree before ===
+{{{
+ node1
+  - node2
+ node2
+ node1
+  - node2
+
+}}}
+=== Template tree after ===
+{{{
+ node1
+  - node2
+  - PHP
+ node2
+ node1
+  - node2
+  - PHP
+
+}}}
+----
+
+== See also ==
+ * [varsToSelectorMethodPHP varsToSelector]
+ * [varsToFormMethodPHP varsToForm]
+
+
+=== Comments allowed ===

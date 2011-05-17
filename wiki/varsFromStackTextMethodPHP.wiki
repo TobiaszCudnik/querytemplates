@@ -1,0 +1,14 @@
+#sidebar SyntaxSidebar
+= `varsFromStackText` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [varsFromSyntax varsFrom] > [varsFromStackTextMethodPHP varsFromStackText]
+=== Parameters ===
+ * *$name* _String_
+  New variable name.
+
+
+=== Description ===
+Saves text() as value of variable $var avaible in template scope.
+----
+
+
+=== Comments allowed ===

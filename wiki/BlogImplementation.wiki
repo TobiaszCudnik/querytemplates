@@ -1,0 +1,37 @@
+#labels Featured
+*QT Blog* is a CakePHP based blog implementation created to present various QueryTemplates usage patterns:
+ * DB data injections
+ * Callback sources
+ * Multiple template sources
+ * Form convertions
+
+It uses CakeForms plugin, which converts pure HTML forms into PHP templates integrated with CakePHP FormHelper.
+
+You can browse source directly via [http://code.google.com/p/querytemplates/source/browse/qt-blog/ web repository]
+ * Templates sources (markup)
+  * [http://code.google.com/p/querytemplates/source/browse/qt-blog/webroot/templates/index.htm index.htm]
+  * [http://code.google.com/p/querytemplates/source/browse/qt-blog/webroot/templates/elements/post-extends.htm post-extends.htm]
+ * QueryTemplates templates (logic)
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/views/layouts/default.ctp layouts/default.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/views/posts/admin_add.ctp posts/admin_add.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/views/posts/admin_edit.ctp posts/admin_edit.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/views/posts/index.ctp posts/index.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/views/posts/latest.ctp posts/latest.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/views/posts/view.ctp posts/view.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/views/tags/index.ctp tags/index.ctp]
+ * Final templates files
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/tmp/cache/views/layouts_default.ctp.code.php layouts/default.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/tmp/cache/views/posts_admin_add.ctp.code.php posts/admin_add.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/tmp/cache/views/posts_admin_edit.ctp.code.php posts/admin_edit.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/tmp/cache/views/posts_index.ctp.code.php posts/index.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/tmp/cache/views/posts_latest.ctp.code.php posts/latest.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/tmp/cache/views/posts_view.ctp.code.php posts/view.ctp]
+   * [http://code.google.com/p/querytemplates/source/browse/qt-blog/tmp/cache/views/tags_index.ctp.code.php tags/index.ctp]
+
+== Download ==
+*QT Blog* can be downloaded from [http://code.google.com/p/querytemplates/downloads/list download section].
+
+== Installation ==
+ # Execute DATABASE.sql
+ # Edit config/database.php with proper user data
+ # Edit webroot/index.php changing CAKE_CORE_INCLUDE_PATH to your CakePHP 1.2 path

@@ -1,0 +1,7 @@
+=== Required dependencies ===
+ * [http://code.google.com/p/phpquery/ phpQuery]
+ * PHP5
+ * PHP5 DOM Extension
+
+=== Optional dependencies ===
+ * ZendFramework (Ajax only)

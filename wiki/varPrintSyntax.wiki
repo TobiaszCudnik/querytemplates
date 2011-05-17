@@ -1,0 +1,12 @@
+#sidebar SyntaxSidebar
+= `varPrint` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [varPrintSyntax varPrint]
+
+== Methods ==
+ * [varPrintMethodPHP varPrint]
+ * [varPrintAfterMethodPHP varPrintAfter]
+ * [varPrintAppendMethodPHP varPrintAppend]
+ * [varPrintAttrMethodPHP varPrintAttr]
+ * [varPrintBeforeMethodPHP varPrintBefore]
+ * [varPrintPrependMethodPHP varPrintPrepend]
+ * [varPrintReplaceMethodPHP varPrintReplace]

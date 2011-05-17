@@ -1,0 +1,12 @@
+#sidebar SyntaxSidebar
+= `formFrom` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [formFromSyntax formFrom]
+
+== Methods ==
+=== PHP ===
+ * [formFromVarsMethodPHP formFromVars]
+ * [formFromValuesMethodPHP formFromValues]
+ * [inputsFromValuesMethodPHP inputsFromValues]
+=== JS ===
+ * formFromValues
+ * inputsFromValues

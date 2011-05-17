@@ -1,0 +1,12 @@
+#sidebar SyntaxSidebar
+= `tagToElsePHP` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [elseSyntax else] > [tagToElsePHPMethodPHP tagToElsePHP]
+=== Parameters ===
+
+
+=== Description ===
+
+----
+
+
+=== Comments allowed ===

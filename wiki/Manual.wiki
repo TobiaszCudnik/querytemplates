@@ -1,0 +1,20 @@
+#labels Featured
+Manual is work in progress. More information can be found in [Syntax Syntax reference] and [http://meta20.net/querytemplates-api/ API Rerefence].
+
+= Table of Contents =
+   * Preparing environment
+   * [TemplateStructure Template Structure]
+   * [TemplateSources Template Sources]
+   * [DataInjectionMethods Data Injection Methods]
+   * Code Injection Methods
+   * Other Methods
+   * Final Template
+   * Supported Languages
+   * jQuery API extensions
+   * [Events Events]
+   * [Integration Integration]
+   * Template side includes
+   * [ExtendingQueryTemplates Extending QueryTemplates]
+   * [Debugging Debugging]
+
+For informations about phpQuery please refer to [http://code.google.com/p/phpquery/wiki/Manual phpQuery Manual].

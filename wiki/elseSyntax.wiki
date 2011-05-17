@@ -1,0 +1,15 @@
+#sidebar SyntaxSidebar
+= `else` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [elseSyntax else]
+
+== Methods ==
+ * [elseIfNotVarMethodPHP elseIfNotVar]
+ * [elseIfPHPMethodPHP elseIfPHP]
+ * [elseIfVarMethodPHP elseIfVar]
+ * [elsePHPMethodPHP elsePHP]
+ * [elseStatementMethodPHP elseStatement]
+ * [tagToElseIfNotVarMethodPHP tagToElseIfNotVar]
+ * [tagToElseIfPHPMethodPHP tagToElseIfPHP]
+ * [tagToElseIfVarMethodPHP tagToElseIfVar]
+ * [tagToElsePHPMethodPHP tagToElsePHP]
+ * [tagToElseStatementMethodPHP tagToElseStatement]

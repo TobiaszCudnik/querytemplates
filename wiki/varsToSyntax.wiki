@@ -1,0 +1,23 @@
+#sidebar SyntaxSidebar
+= `varsTo` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [varsToSyntax varsTo]
+
+== Methods ==
+ * [varsToFormMethodPHP varsToForm]
+ * [varsToLoopMethodPHP varsToLoop]
+ * [varsToLoopFirstMethodPHP varsToLoopFirst]
+ * [varsToLoopSeparateMethodPHP varsToLoopSeparate]
+ * [varsToSelectorMethodPHP varsToSelector]
+ * [varsToSelectorAfterMethodPHP varsToSelectorAfter]
+ * [varsToSelectorAppendMethodPHP varsToSelectorAppend]
+ * [varsToSelectorAttrMethodPHP varsToSelectorAttr]
+ * [varsToSelectorBeforeMethodPHP varsToSelectorBefore]
+ * [varsToSelectorPrependMethodPHP varsToSelectorPrepend]
+ * [varsToSelectorReplaceMethodPHP varsToSelectorReplace]
+ * [varsToStackMethodPHP varsToStack]
+ * [varsToStackAfterMethodPHP varsToStackAfter]
+ * [varsToStackAppendMethodPHP varsToStackAppend]
+ * [varsToStackAttrMethodPHP varsToStackAttr]
+ * [varsToStackBeforeMethodPHP varsToStackBefore]
+ * [varsToStackPrependMethodPHP varsToStackPrepend]
+ * [varsToStackReplaceMethodPHP varsToStackReplace]

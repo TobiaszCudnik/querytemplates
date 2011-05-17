@@ -1,0 +1,25 @@
+#labels Featured
+= Syntax =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax]
+
+= PHP =
+ * === [varPrintSyntax varPrint] ===
+ * === [varsToSyntax varsTo] ===
+ * === [valuesToSyntax valuesTo] ===
+ * === [codeToSyntax codeTo] ===
+ * === [ToStackSyntax ToStack] ===
+ * === [ToSelectorSyntax ToSelector] ===
+ * === [ToLoopSyntax ToLoop] ===
+ * === [ifSyntax if] ===
+ * === [elseSyntax else] ===
+ * === [ToFormSyntax ToForm] ===
+ * === [formFromSyntax formFrom] ===
+ * === [varsFromSyntax varsFrom] ===
+
+= JS =
+ * === [valuesToSyntax valuesTo] ===
+ * === [ToStackSyntax ToStack] ===
+ * === [ToSelectorSyntax ToSelector] ===
+ * === [ToLoopSyntax ToLoop] ===
+ * === `ToForm` ===
+ * === formFrom ==========

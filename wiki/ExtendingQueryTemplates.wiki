@@ -1,0 +1,5 @@
+QueryTemplates can be extended in 2 ways:
+ * [http://tobiasz123.wordpress.com/2008/10/05/scripts-plugin-for-phpquery/ phpQuery script]
+   One file per method with no enviroment preparation. Can be used anywhere inside chain. Dedicated config file available.
+ * [http://code.google.com/p/phpquery/wiki/ScriptsPlugin phpQuery plugin]
+   Allowed to extend also static phpQuery namespace. Can consist of several methods.

@@ -1,0 +1,17 @@
+#sidebar SyntaxSidebar
+= `ToLoop` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [ToLoopSyntax ToLoop]
+
+== Methods ==
+=== PHP ===
+ * [valuesToLoopMethodPHP valuesToLoop]
+ * [valuesToLoopFirstMethodPHP valuesToLoopFirst]
+ * [valuesToLoopSeparateMethodPHP valuesToLoopSeparate]
+ * [varsToLoopMethodPHP varsToLoop]
+ * [varsToLoopFirstMethodPHP varsToLoopFirst]
+ * [varsToLoopSeparateMethodPHP varsToLoopSeparate]
+
+=== JS ===
+ * [valuesToLoopMethodJS valuesToLoop]
+ * [valuesToLoopFirstMethodJS valuesToLoopFirst]
+ * [valuesToLoopSeparateMethodJS valuesToLoopSeparate]

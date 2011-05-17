@@ -1,0 +1,13 @@
+= QueryTemplates Examples =
+This directory contains examples showing how to use QueryTemplates templating 
+engine.
+
+There are 3 sections of examples:
+ * Simple
+ * Intermediate
+ * Advanced
+
+After reading all 8 examples you should be able to start implementing 
+QueryTemplates in you application. Each example contains comments describing 
+new things introduced in it and refers to previous one in same section. 
+Comments from previous example are removed.

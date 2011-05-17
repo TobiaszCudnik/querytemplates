@@ -1,0 +1,16 @@
+#sidebar SyntaxSidebar
+= `ifCode` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [ifSyntax if] > [ifCodeMethodPHP ifCode]
+=== Parameters ===
+ * *$code* _code_
+
+ * *$separate* _separate_ = `false`
+
+
+
+=== Description ===
+TODO doc
+----
+
+
+=== Comments allowed ===

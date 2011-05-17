@@ -1,0 +1,19 @@
+#sidebar SyntaxSidebar
+= `codeTo` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [codeToSyntax codeTo]
+
+== Methods ==
+ * [codeToSelectorMethodPHP codeToSelector]
+ * [codeToSelectorAfterMethodPHP codeToSelectorAfter]
+ * [codeToSelectorAppendMethodPHP codeToSelectorAppend]
+ * [codeToSelectorAttrMethodPHP codeToSelectorAttr]
+ * [codeToSelectorBeforeMethodPHP codeToSelectorBefore]
+ * [codeToSelectorPrependMethodPHP codeToSelectorPrepend]
+ * [codeToSelectorReplaceMethodPHP codeToSelectorReplace]
+ * [codeToStackMethodPHP codeToStack]
+ * [codeToStackAfterMethodPHP codeToStackAfter]
+ * [codeToStackAppendMethodPHP codeToStackAppend]
+ * [codeToStackAttrMethodPHP codeToStackAttr]
+ * [codeToStackBeforeMethodPHP codeToStackBefore]
+ * [codeToStackPrependMethodPHP codeToStackPrepend]
+ * [codeToStackReplaceMethodPHP codeToStackReplace]

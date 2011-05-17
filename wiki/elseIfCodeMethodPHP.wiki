@@ -1,0 +1,16 @@
+#sidebar SyntaxSidebar
+= `elseIfCode` =
+[http://code.google.com/p/querytemplates/w/list Wiki] > [Syntax Syntax] > [elseSyntax else] > [elseIfCodeMethodPHP elseIfCode]
+=== Parameters ===
+ * *$code* 
+
+ * *$separate*  = `false`
+
+
+
+=== Description ===
+
+----
+
+
+=== Comments allowed ===
