@@ -1,6 +1,6 @@
-# querytemplates
+Moved from [code.google.com/archive/p/querytemplates](https://code.google.com/archive/p/querytemplates/)
 
-Moved from [code.google.com/archive/p/querytemplates/](https://code.google.com/archive/p/querytemplates/).
+# querytemplates
 
 **DOM and CSS driven template engine**
 
